@@ -18,9 +18,9 @@ def generate_password(min_length, has_numbers=True, has_specials=True):
         if has_specials:
             random_password += random.choice(specials)
 
-    shuffled_password = list(random_password)
-
-    password = "".join(shuffled_password)
+    random_password = list(random_password)
+    random.shuffle(random_password)
+    password = "".join(random_password)
 
     return password
 
